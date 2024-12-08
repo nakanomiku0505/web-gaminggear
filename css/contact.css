@@ -1,0 +1,94 @@
+.ftco-section {
+    padding: 7rem 0;
+    background: #f8f9fa;
+  }
+  .heading-section {
+    font-size: 2.5rem;
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  .wrapper {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap {
+    padding: 3rem;
+  }
+  .contact-wrap h3 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  .form-group input,
+  .form-group textarea {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  .form-group .btn-primary {
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .form-group .btn-primary:hover {
+    background: #0056b3;
+  }
+  .info-wrap {
+    padding: 3rem;
+    color: #fff;
+  }
+  .info-wrap h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .dbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .dbox .icon {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  .dbox .icon span {
+    color: #007bff;
+    font-size: 1.5rem;
+  }
+  .dbox .text p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .dbox .text p span {
+    font-weight: 700;
+  }
+  .dbox .text p a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .dbox .text p a:hover {
+    color: #0056b3;
+  }

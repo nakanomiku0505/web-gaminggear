@@ -1,0 +1,330 @@
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+.below-nav{
+    max-width: 85%;
+}
+.navbar-top nav{
+    font:500;
+    
+}
+.align-items-center{
+    align-items: center;
+}
+.jusitfy-content-between{
+    justify-content: space-between;
+}
+.product-sale{
+    background-color: #8ed1af;
+    padding: 2rem 0;
+    border-radius: 20px;
+    max-width: 85%;
+    border: 0px;
+}
+.product-card {
+    position: relative;
+    text-align: center; /* Center text in card */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 13px; /* Rounded corners */
+    padding: 5px; /* Reduce padding inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth transform effect on hover */
+    width: 400px; /* Set a specific width for the card */
+    margin: auto; /* Center the card horizontally */
+    background-color: aliceblue;
+    overflow: hidden; /* Prevent image from overflowing */
+}
+.discount {
+    position: absolute; /* Định vị phần discount */
+    top: 10px; /* Cách từ trên xuống */
+    left: 10px; /* Cách từ bên trái */
+    background-color: rgba(255, 0, 0, 0.8); /* Màu nền cho phần discount */
+    color: white; /* Màu chữ */
+    padding: 5px 10px; /* Padding cho phần discount */
+    border-radius: 5px; /* Bo tròn các góc */
+    font-weight: bold; /* Đậm chữ */
+    z-index: 10; /* Đặt z-index cao để phần discount hiển thị trên ảnh */
+}
+.product-card img {
+    width: 80%; /* Set image width to 80% of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    z-index: 1; /* Đặt z-index thấp hơn để phần ảnh ở dưới discount */
+    max-width: 100%; /* Ensure the image does not exceed card boundaries */
+    transition: transform 0.3s ease-in-out; /* Smooth transform effect on hover */
+}
+
+.card-body p, .card-body h5 {
+    margin: 5px 0; /* Reduce margin for text elements */
+    text-align: left;
+    padding-left: 10px;
+}
+.product-card .price{
+    font-size: 23px;
+}
+
+.product-card img:hover {
+    transform: scale(1.02); /* Increase the size of the image on hover */
+}
+
+.icon-container{
+    text-align: center;
+}
+.icon-container button{
+    width: 20%;
+}
+.navbar{
+    background-color: #d8ffec;
+}
+.navbar-down .container {
+    display: flex;
+    justify-content: center; /* Căn giữa ul trong container */
+}
+
+.navbar-down .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%; /* Điều chỉnh độ rộng theo ý muốn, nhỏ hơn 100% để ngắn lại */
+}
+
+.navbar-down .nav-item {
+    flex: 1; /* Hoặc có thể là giá trị nhỏ hơn như 0.5 tùy chỉnh */
+    align-items: center;
+}
+.navbar-down .nav-link {
+    font-family: 'Arial', sans-serif; /* Thay đổi font chữ */
+    font-size: 16px; /* Đặt kích thước font */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 10px; /* Tùy chỉnh khoảng cách */
+}
+
+.navbar-down .nav-link:hover {
+    color: #0056b3; /* Màu chữ khi di chuột qua */
+}
+
+.navbar-down .nav-link.active {
+    font-weight: bold; /* Đậm cho liên kết đang hoạt động */
+}
+.btnl {
+    background-color: #007bff; /* Màu nền cho nút */
+    border: none; /* Bỏ viền */
+}
+
+.btnl:hover {
+    background-color: #92e4ad; /* Màu nền khi hover vào nút */
+    color: white; /* Thay đổi màu chữ khi hover */
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px; /* Thay đổi chiều rộng của nút */
+    height: 40px; /* Thay đổi chiều cao của nút */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền cho nút */
+    border-radius: 50%; /* Bo tròn các góc */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Điều chỉnh vị trí để căn giữa hoàn hảo */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Thay đổi màu nền khi hover */
+}
+.mouse-pad{
+    background-color: #5d787e;
+    padding: 2rem 0;
+    border-radius: 20px;
+    max-width: 85%;
+    border: 0px;
+}
+.gaming-gear{
+    background-color: #e6d6ff;
+    padding: 2rem 0;
+    border-radius: 20px;
+    max-width: 85%;
+    border: 0px;
+}
+.mouse-pad .card{
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài card */
+    position: relative; /* Để áp dụng hiệu ứng tốt hơn */
+    
+}
+.gaming-gear .card{
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài card */
+    position: relative; /* Để áp dụng hiệu ứng tốt hơn */
+}
+.homepage-container .card img {
+    transition: transform 0.5s ease-in-out; /* Smooth transform effect on hover */
+}
+.homepage-container .card img:hover {
+    transform: scale(1.05); /* Increase the size of the image on hover */
+}
+.card-title{
+    display: -webkit-box; /* Thiết lập chế độ hiển thị thành box */
+    -webkit-box-orient: vertical; /* Thiết lập hướng cho box */
+    -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị */
+    line-clamp: 2;                    /* Standard property for modern browsers */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Thêm ba chấm khi nội dung vượt quá */
+    line-height: 1.2; /* Chiều cao dòng để điều chỉnh khoảng cách giữa các dòng */
+    max-height: 2.4em; /* Đảm bảo chiều cao tối đa cho 2 dòng */
+}
+.acc-computer{
+    background-color: #ffd6d6;
+    padding: 2rem 0;
+    border-radius: 20px;
+    max-width: 85%;
+    border: 0px;
+}
+.acc-computer .card{
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài card */
+    position: relative; /* Để áp dụng hiệu ứng tốt hơn */
+}
+.additional-info {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+}
+.additional-info a {
+    color: #00a99d;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.additional-info a:hover {
+    text-decoration: underline;
+}
+.additional-info .container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+}
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+/* Hide the numbers but keep the circles */
+/* Hide the numbers inside the carousel indicators */
+.carousel-indicators li {
+  font-size: 0; /* Hides the text content */
+}
+
+/* Optional: Completely hide any number content */
+.carousel-indicators li::before {
+  content: none; /* Removes any default number content */
+}
+.icon-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center; /* Căn chính giữa nút */
+    align-items: center;
+}
+
+/* Toast notification container */
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: #28a745; /* Màu xanh thành công */
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.toast i {
+  margin-right: 10px;
+}
+
+/* Keyframes for animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+/* Style cho dropdown */
+.nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    color: #747474; /* Màu chữ */
+    font-weight: bold; /* Chữ đậm */
+    padding: 10px 15px; /* Cách lề chữ */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ff6600; /* Màu khi hover */
+  }
+  
+  .dropdown-menu {
+    background-color: #333; /* Màu nền menu */
+    border: none; /* Bỏ viền */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    margin-top: 5px; /* Khoảng cách so với link chính */
+  }
+  
+  .dropdown-item {
+    color: #ffffff; /* Màu chữ item */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #ff6600; /* Màu nền khi hover */
+    color: #ffffff; /* Màu chữ khi hover */
+  }
+  
+  .dropdown-toggle::after {
+    margin-left: 8px; /* Khoảng cách icon */
+    vertical-align: middle; /* Căn giữa icon */
+    border-top: 5px solid #ffffff; /* Mũi tên */
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  
+  .dropdown-toggle:hover::after {
+    border-top: 5px solid #ff6600; /* Đổi màu mũi tên khi hover */
+  }
+  

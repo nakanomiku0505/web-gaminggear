@@ -1,0 +1,54 @@
+/* Cải tiến kiểu dáng cho card */
+.card {
+    border: none;
+    border-radius: 12px; /* Bo góc cho card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.card-body {
+    padding: 1.5rem; /* Tăng khoảng cách trong card */
+    background-color: #f7f7f7; /* Nền sáng */
+    border-radius: 12px; /* Bo góc cho phần body */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tạo hiệu ứng hover cho card */
+.card:hover {
+    transform: translateY(-10px); /* Di chuyển card lên khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bóng đổ đậm hơn khi hover */
+}
+
+/* Đổi màu nền của tiêu đề */
+.card-body h5 {
+    color: #4e73df; /* Màu tiêu đề xanh dương */
+    font-size: 1.25rem;
+}
+
+/* Thêm màu sắc cho các con số */
+.card-body p {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Thêm màu sắc cho badge */
+.card-body .badge {
+    background-color: #28a745; /* Màu xanh lá cho badge */
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.card-body .badge.text-success {
+    background-color: #17c671; /* Màu xanh lá đậm */
+}
+
+/* Chỉnh màu cho phần "Since Last Month" */
+.card-body .fw-bold {
+    color: #6c757d; /* Màu xám cho dòng mô tả */
+    font-size: 1rem;
+}

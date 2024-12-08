@@ -1,0 +1,97 @@
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+  
+  .list-group-item:first-child {
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .list-group-item:last-child {
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .list-group-item.d-flex {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .list-group-item.bg-light {
+    background-color: #e9f7ef;
+  }
+  
+  .text-success {
+    color: #28a745 !important;
+    font-weight: 500;
+  }
+  
+  .card form {
+    padding: 15px;
+    background-color: #f8f9fa;
+  }
+  
+  .card form .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group .form-control {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-right: none;
+  }
+  
+  .input-group .btn-secondary {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group .btn-secondary:hover {
+    background-color: #5a6268;
+    color: white;
+  }
+  
+  .card-footer,
+  .card form {
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .card-footer span,
+  .card-footer strong {
+    font-size: 1rem;
+  }
+  
+  .card-footer strong {
+    color: #343a40;
+  }
+  
+  h6.my-0 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #343a40;
+  }
+  
+  small.text-muted {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  

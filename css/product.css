@@ -1,0 +1,122 @@
+.product-list{
+    max-width: 90%;
+}
+/* Phong cách chung cho các nút phân trang */
+button.page-btn, button.btn-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Bo tròn các góc của nút */
+    border: 2px solid #007bff; /* Viền nút */
+    background-color: #ffffff; /* Màu nền */
+    color: #007bff; /* Màu chữ */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    cursor: pointer;
+    margin: 5px; /* Khoảng cách giữa các nút */
+}
+
+/* Khi nút được hover (di chuột vào) */
+button.page-btn:hover, button.btn-secondary:hover {
+    background-color: #007bff; /* Thay đổi màu nền khi hover */
+    color: white; /* Đổi màu chữ khi hover */
+    border-color: #0056b3; /* Đổi màu viền khi hover */
+}
+
+/* Khi nút đang ở trạng thái 'active' (được chọn) */
+button.page-btn.active, button.btn-secondary.active {
+    background-color: #0056b3; /* Nền màu xanh đậm khi chọn */
+    color: white; /* Màu chữ trắng */
+    border-color: #004085; /* Viền xanh đậm */
+}
+
+/* Nút vô hiệu hóa (disabled) */
+button:disabled {
+    background-color: #e0e0e0; /* Màu xám cho nút vô hiệu */
+    color: #6c757d; /* Màu chữ xám */
+    border-color: #d6d6d6; /* Màu viền xám */
+    cursor: not-allowed; /* Con trỏ sẽ là không cho phép */
+}
+
+
+.dots {
+    display: inline-block;
+    margin: 0 5px;
+    color: #6c757d;
+    font-weight: bold;
+
+}
+.card {
+    height: 550px; /* Đặt chiều cao cố định cho card */
+    display: flex;
+    flex-direction: column; /* Bố trí dọc */
+    justify-content: space-between; /* Đẩy nội dung giữa khoảng trống */
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài card */
+    position: relative; /* Để áp dụng hiệu ứng tốt hơn */
+    background-color: #fff3f3;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung bên trong card-body theo cột */
+    justify-content: space-between; /* Đẩy các phần tử cách đều nhau */
+    flex-grow: 1; /* Đẩy card-body giãn đều */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* Căn giữa nút mua theo chiều ngang */
+    margin-top: auto; /* Đẩy nút mua xuống dưới cùng */
+}
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+/* Phong cách cho hình ảnh */
+.card-img-top {
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà khi thay đổi kích thước */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+/* Hiệu ứng hover: khi di chuột vào ảnh */
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Phóng to ảnh lên 10% */
+}
+.card{
+    height: 550px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.card-img-top{
+    min-height: 300px;
+}
+/* Căn chỉnh tiêu đề */
+h5 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Khoảng cách giữa các mục */
+.list-group-item {
+    display: flex;
+    align-items: center; /* Giúp căn giữa checkbox và text */
+    padding: 8px 10px;
+}
+
+/* Dòng kẻ ngăn cách */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #000000;
+}
+
+

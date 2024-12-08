@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mikaa - Đăng nhập</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+
+  </head>
+
+  <body>
+    <header>
+      <!-- <div class="navbar-down navbar-expand">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item d-inline-flex justify-content-center">
+              <a class="nav-link" aria-current="page" href="homepage.html">Trang chủ</a>
+            </li>
+            <li class="nav-item d-inline-flex justify-content-center">
+
+              <a class="nav-link" href="product.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item d-inline-flex justify-content-center">
+              <a class="nav-link" href="#">Liên hệ</a>
+            </li>
+            <li class="nav-item d-inline-flex justify-content-center">
+              <a class="nav-link" href="#"><i class='bx bxl-facebook-square me-1'></i>Fanpage của chúng tôi</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm shadow mb-4">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="srcimg/Mikaa.png" alt="" height="50px" />
+          </a>
+          
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="homepage.html" aria-current="page"
+                        >Trang chủ
+                        <span class="visually-hidden">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="product.html"
+                      id="dropdownId"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Sản phẩm</a
+                    >
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="product.html">GAMING GEAR</a>
+                      <a class="dropdown-item" href="product.html">LÓT CHUỘT</a>
+                      <a class="dropdown-item" href="product.html">MÀN HÌNH</a>
+                      <a class="dropdown-item" href="product.html">GHẾ GAMING</a>
+                      <a class="dropdown-item" href="product.html">MICRO, TAI NGHE, LOA</a>
+                      <a class="dropdown-item" href="product.html">PHỤ KIỆN MÁY TÍNH</a>
+                    </div>
+                  </li>
+                </ul>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html" aria-current="page"
+                        >Liên hệ
+                        <span class="visually-hidden">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="news.html" aria-current="page"
+                        >Tin tức
+                        <span class="visually-hidden">(current)</span></a
+                    >
+                  </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Tìm kiếm sản phẩm"
+                />
+                <button class="input-group-text">
+                  <i class='bx bxs-search'></i>
+                </button>
+              </div>
+            </form>
+            
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ms-2">
+              <form class="d-flex">
+                <button class="btn btn-outline-dark" onclick="window.location.href='cart.html'" type="button">
+                  <i class="bi-cart-fill me-1"></i>
+                  Giỏ hàng
+                  <span class="cart badge bg-dark text-white ms-1 rounded-pill">0</span>
+              </button>
+              
+              </form>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"><i class="bx bx-user"></i>Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+    <main>
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+              <div class="wrapper">
+                <div class="row no-gutters">
+                  <div class="col-md-7 d-flex align-items-stretch">
+                    <div class="contact-wrap w-100 p-md-5 p-4">
+                      <h3 class="mb-4">Liên hệ</h3>
+                      <div id="form-message-warning" class="mb-4"></div> 
+                      <div id="form-message-success" class="mb-4">
+                      </div>
+                      <form method="POST" id="contactForm" name="contactForm">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="name" id="name" placeholder="Họ và tên">
+                            </div>
+                          </div>
+                          <div class="col-md-6"> 
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Chủ đề">
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Tin nhắn"></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input value="Gửi tin nhắn" class="btn btn-primary">
+                              <div class="submitting"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-5 d-flex align-items-stretch">
+                    <div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+                      <h3 class="mb-4 mt-md-4">Liên hệ với chúng tôi</h3>
+                      <div class="dbox w-100 d-flex align-items-start">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="bx bx-map-pin"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p><span>Địa chỉ:</span> wutdahell</p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="bx bx-phone"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p><span>Số điện thoại:</span> <a href="tel://1234567920">+84 982 329 837</a></p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="bx bx-paper-plane"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p><span>Email:</span> <a href="mailto:info@yoursite.com">accjpbruh@gmail.com</a></p>
+                        </div>
+                      </div>
+                      <div class="dbox w-100 d-flex align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <span class="bx bx-globe"></span>
+                        </div>
+                        <div class="text pl-3">
+                          <p><span>Website:</span> <a href="#">mikaamisono.com</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center mt-5">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-facebook-circle' ></i></a>
+
+          <!-- Twitter -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-twitter' ></i></a>
+
+          <!-- Google -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-google' ></i></a>
+
+          <!-- Instagram -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-instagram' ></i></a>
+
+          <!-- Github -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-github' ></i></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Đăng ký nhận bản tin của chúng tôi:</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="form5Example24" class="form-control" />
+                  <label class="form-label" for="form5Example24">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button data-mdb-ripple-init type="submit" class="btn btn-outline-primary mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Chào mừng bạn đến với trang web của chúng tôi, nơi cung cấp các thiết bị chơi game chất lượng cao! Chúng tôi chuyên cung cấp bàn phím, chuột, tai nghe và phụ kiện gaming từ các thương hiệu hàng đầu. Với giá cả hợp lý và dịch vụ khách hàng tận tâm, chúng tôi cam kết mang đến trải nghiệm chơi game tuyệt vời nhất cho bạn.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul> -->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul> -->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div> -->
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div> -->
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://fb.com/sato.nakata.2810">Facebook: NQA</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/hp.js">
+      
+    </script>
+    <script src="js/updatecart.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,14 @@
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    padding-left: .75em;
+    padding-right: .75em;
+    padding-bottom: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    .form-control-sm {
+        min-width: 50px; /* Hoặc giá trị phù hợp hơn */
+    }
+    

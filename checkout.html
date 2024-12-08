@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Thanh toán</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/checkout.css">
+  </head>
+
+  <body>
+    <header>
+      
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm shadow mb-4">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="srcimg/Mikaa.png" alt="" height="50px" />
+          </a>
+          
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="homepage.html" aria-current="page"
+                      >Trang chủ
+                      <span class="visually-hidden">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="product.html"
+                    id="dropdownId"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Sản phẩm</a
+                  >
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="product.html">GAMING GEAR</a>
+                    <a class="dropdown-item" href="product.html">LÓT CHUỘT</a>
+                    <a class="dropdown-item" href="product.html">MÀN HÌNH</a>
+                    <a class="dropdown-item" href="product.html">GHẾ GAMING</a>
+                    <a class="dropdown-item" href="product.html">MICRO, TAI NGHE, LOA</a>
+                    <a class="dropdown-item" href="product.html">PHỤ KIỆN MÁY TÍNH</a>
+                  </div>
+                </li>
+              </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html" aria-current="page"
+                      >Liên hệ
+                      <span class="visually-hidden">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" aria-current="page"
+                      >Tin tức
+                      <span class="visually-hidden">(current)</span></a
+                  >
+                </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Tìm kiếm sản phẩm"
+                />
+                <button class="input-group-text">
+                  <i class='bx bxs-search'></i>
+                </button>
+              </div>
+            </form>
+            
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ms-2">
+              <form class="d-flex">
+                <button class="btn btn-outline-dark" onclick="window.location.href='cart.html'" type="button">
+                  <i class="bi-cart-fill me-1"></i>
+                  Giỏ hàng  
+                  <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
+              </form>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"><i class="bx bx-user"></i>Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+    <main>
+        <body class="bg-light">
+            <div class="container">
+              <div class="row">
+                
+                <div class="col-md-4 order-2">
+                  <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Giỏ hàng của bạn</span>
+                    <span class="badge rounded-pill bg-secondary" id="cart-item-count"></span>
+                  </h4>
+                
+                  <div class="card">
+                    <ul class="list-group" id="cart-items-list"></ul>
+                
+                    <li class="list-group-item d-flex justify-content-between bg-light" id="discount-code-item" style="display: none;">
+                      <div class="text-success">
+                        <h6 class="my-0">Mã khuyến mãi</h6>
+                        <small id="discount-code"></small>
+                        <div id="no-discount-message" style="display: none;">Không có mã giảm giá</div>
+                      </div>
+                      <span class="text-success" id="discount-amount"></span>
+                    </li>
+                
+                    <div class="card-footer d-flex justify-content-between">
+                      <span>Tổng cộng</span>
+                      <strong id="total-price"></strong>
+                    </div>
+                  </div>
+                </div>
+                
+                 
+                <div class="col-md-8 order-1">
+                  <h4 class="mb-3">Địa chỉ thanh toán</h4>
+                  <form id="payment-form" novalidate>
+                    <div class="row">
+                      <div class="col mb-4">
+                        <label for="first-name">Tên</label>
+                        <input type="text" class="form-control" id="first-name" placeholder="Tên" aria-label="First name" required>
+                        <div class="invalid-feedback">
+                          Vui lòng nhập tên.
+                        </div>
+                      </div>
+                      <div class="col mb-4">
+                        <label for="last-name">Họ</label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Họ" aria-label="Last name" required>
+                        <div class="invalid-feedback">
+                          Vui lòng nhập họ.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label for="email">Email (tuỳ chọn)</label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" aria-label="email">
+                      <div class="invalid-feedback">
+                        Vui lòng nhập địa chỉ email hợp lệ.
+                      </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label for="address">Địa chỉ</label>
+                      <input type="text" class="form-control" id="address" placeholder="1234 Đường chính" aria-label="Address" required>
+                      <div class="invalid-feedback">
+                        Vui lòng nhập địa chỉ.
+                      </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label for="phone">Số điện thoại</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại liên hệ" aria-label="telephone" required>
+                      <div class="invalid-feedback">
+                        Vui lòng nhập số điện thoại hợp lệ.
+                      </div>
+                    </div>
+                  </form>
+                  
+                  <div class="row">
+              
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Lưu thông tin này cho lần sau
+                      </label>
+                    </div>
+                    
+                    <hr class="mb-4">
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Thẻ ngân hàng
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Chuyển khoản ngân hàng
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="flexRadioDefault3" checked>
+                      <label class="form-check-label" for="flexRadioDefault3">
+                        Thanh toán khi nhận hàng
+                      </label>
+                    </div>
+                    
+                    <!-- Thông tin thẻ ngân hàng -->
+                    <div id="bankCardInfo" class="payment-method" style="display: none;">
+                      <div class="row">
+                        <div class="col mb-4">
+                          <label for="Card1">Tên trên thẻ</label>
+                          <input type="text" class="form-control" id="card1" aria-label="card1" required>
+                          <div class="invalid-feedback">
+                            Vui lòng nhập tên đầy đủ như trên thẻ.
+                          </div>
+                        </div>
+                        <div class="col mb-4">
+                          <label for="Card2">Số thẻ tín dụng</label>
+                          <input type="text" class="form-control" id="card2" placeholder="1234-5678-9012" aria-label="Card2" required pattern="\d{4}-\d{4}-\d{4}-\d{4}">
+                          <div class="invalid-feedback">
+                            Vui lòng nhập số thẻ tín dụng hợp lệ (chẳng hạn như 1234-5678-9012-3456).
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label for="Card3">Ngày hết hạn</label>
+                          <input type="text" class="form-control" id="card3" aria-label="card3" required pattern="(0[1-9]|1[0-2])\/\d{2}">
+                          <div class="invalid-feedback">
+                            Vui lòng nhập ngày hết hạn hợp lệ (mm/yy).
+                          </div>
+                        </div>
+                        <div class="col mb-3">
+                          <label for="Card4">CVV</label>
+                          <input type="text" class="form-control" id="card4" aria-label="Card4" required pattern="\d{3}">
+                          <div class="invalid-feedback">
+                            Vui lòng nhập CVV hợp lệ (3 chữ số).
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Hình ảnh QR cho chuyển khoản ngân hàng -->
+                    <div id="bankTransferQR" class="payment-method" style="display: none;">
+                      <img src="srcimg/qr.jpg" alt="QR Code for bank transfer" class="img-fluid">
+                    </div>
+                    
+                    <!-- Không hiển thị gì khi chọn Thanh toán khi nhận hàng -->
+                    <div id="cashOnDeliveryInfo" class="payment-method" style="display: none;"></div>
+                
+                <hr class="mb-4">
+                
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary btn-lg" type="button" id="continue-button">
+                    Tiếp tục thanh toán
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+    </main>
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center mt-5">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-facebook-circle' ></i></a>
+
+          <!-- Twitter -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-twitter' ></i></a>
+
+          <!-- Google -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-google' ></i></a>
+
+          <!-- Instagram -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-instagram' ></i></a>
+
+          <!-- Github -->
+          <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+            ><i class='bx bxl-github' ></i></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Đăng ký nhận bản tin của chúng tôi:</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="form5Example24" class="form-control" />
+                  <label class="form-label" for="form5Example24">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button data-mdb-ripple-init type="submit" class="btn btn-outline-primary mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Chào mừng bạn đến với trang web của chúng tôi, nơi cung cấp các thiết bị chơi game chất lượng cao! Chúng tôi chuyên cung cấp bàn phím, chuột, tai nghe và phụ kiện gaming từ các thương hiệu hàng đầu. Với giá cả hợp lý và dịch vụ khách hàng tận tâm, chúng tôi cam kết mang đến trải nghiệm chơi game tuyệt vời nhất cho bạn.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul> -->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul> -->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div> -->
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <!-- <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div> -->
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://fb.com/sato.nakata.2810">Facebook: NQA</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script src="js/updatecart.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

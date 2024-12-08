@@ -1,0 +1,201 @@
+/* Carousel ảnh nhỏ */
+#smallImageCarousel .d-flex {
+    display: flex;
+    transition: transform 0.5s ease; /* Hiệu ứng mượt khi di chuyển */
+    width: 100%; /* Bố cục đầy đủ */
+  }
+  
+  /* Ảnh nhỏ */
+  .small-img {
+    width: 18%; /* 5 ảnh trên một hàng */
+    margin: 0 1%; /* Khoảng cách giữa các ảnh */
+    cursor: pointer;
+    opacity: 0.6; /* Ảnh không được chọn mờ */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    object-fit:scale-down;
+  }
+  
+  .small-img.active {
+    opacity: 1; /* Ảnh được chọn sáng lên */
+    border: 2px solid #007bff; /* Viền xanh cho ảnh được chọn */
+    transform:matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); 
+  }
+  
+  /* Khung chứa carousel */
+  #smallImageCarousel {
+    overflow: hidden; /* Ẩn các ảnh ngoài khung nhìn */
+  }
+  
+  /* Nút Previous/Next */
+  .button-change-img {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  button#prevBtn, button#nextBtn {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: none;
+  }
+/* CSS for smooth transition */
+.big-img-holder img.visible {
+    opacity: 1;
+}
+.big-img-holder img {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng khung */
+    height: auto; /* Giữ tỷ lệ của ảnh */
+    min-height: 490px; /* Chiều cao tối thiểu để tránh méo */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit:scale-down;
+}
+
+
+.button-change-img{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Custom card styles */
+.custom-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header styles */
+.custom-card-header {
+    background-color: #f7f7f7;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+/* Card body styles */
+.custom-card-body {
+    padding: 15px;
+}
+
+/* List group styles */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Icon styles */
+.list-group-item i {
+    margin-right: 10px;
+    color: #007bff; /* You can change this color to match your theme */
+}
+.product-detail-page{
+    max-width: 80%;
+}
+.big-img-holder {
+    position: relative;
+    overflow: hidden; /* Ẩn phần thừa của ảnh */
+    min-height: 490px; /* Chiều cao tối thiểu */
+}
+.line{
+    border: 1px solid #ffebe2;
+    border-radius: 10px;
+}
+.price-product{
+    margin: 12px 0 30px;
+    background: #F4F4F4;
+    border-radius: 15px;
+    padding: 9px 20px;
+    line-height: 35px;
+}
+.pd-new-price{
+    font-weight: 700;
+    font-size: 30px;
+    color: #FF0000;
+}
+.pd-old-price{
+    font-weight: 400;
+    font-size: 20px;
+}
+.pd-discount{
+    color:#0e6363;
+}
+.btn-group {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các nút */
+    justify-content: center; /* Căn giữa các nút theo chiều ngang */
+}
+
+.btn-group .btn-card,
+.btn-group .btn-buynow {
+    margin: 0 10px; /* Tạo khoảng cách giữa các nút */
+    min-width: 45%;
+}
+
+.btn-group .btn {
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng của div chứa */
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px; /* Tăng padding để nút lớn hơn */
+    border-radius: 20px;
+}
+.p-detail ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-related{
+    background-color: #baf3d3;
+    padding: 2rem 0;
+    border-radius: 20px;
+    max-width: 85%;
+    border: 0px;
+}
+.product-related .card{
+    overflow: hidden; /* Ẩn phần ảnh tràn ra ngoài card */
+    position: relative; /* Để áp dụng hiệu ứng tốt hơn */
+}
+.product-related .card img {
+    transition: transform 0.5s ease-in-out; /* Smooth transform effect on hover */
+}
+.product-related .card img:hover {
+    transform: scale(1.05); /* Increase the size of the image on hover */
+}
+.p-related-card{
+    min-height: 493px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.card-img-top{
+    min-height: 300px;
+    object-fit:scale-down;
+}

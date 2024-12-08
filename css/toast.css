@@ -1,0 +1,55 @@
+.toast-container {
+    z-index: 1050; /* Đảm bảo toast xuất hiện trên các phần tử khác */
+    width: auto;
+    max-width: 350px; /* Giới hạn chiều rộng tối đa */
+}
+
+.toast {
+    background-color: #28a745; /* Màu nền xanh lá cho thông báo thành công */
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 8px; /* Góc bo tròn cho toast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+    opacity: 0.9; /* Giảm độ mờ */
+    animation: fadeInToast 0.5s ease-in-out; /* Thêm hiệu ứng xuất hiện */
+}
+
+.toast-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+.toast-body span {
+    font-weight: 500;
+}
+
+/* Nút đóng */
+.toast .btn-close {
+    background: none;
+    border: none;
+    color: #fff; /* Đảm bảo màu của nút đóng là trắng */
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding: 0;
+}
+
+.toast .btn-close:hover {
+    opacity: 1;
+    color: #ddd; /* Thay đổi màu khi hover, nếu cần */
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeInToast {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

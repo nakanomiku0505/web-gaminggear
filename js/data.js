@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cartBadge.textContent = cartCount; // Cập nhật số lượng giỏ hàng
     }
 
-    fetch('../json/data.json') // Đường dẫn tới tệp JSON
+    fetch('json/data.json') // Đường dẫn tới tệp JSON
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
